@@ -1,12 +1,18 @@
-import { ErrorComponent, List } from 'ui';
-import useApi from './hooks/useApi';
-
-const api = "https://pokeapi.co/api/v2/pokemon";
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchPokemon } from './slice/api';
+import { AppDispatch, RootState } from './store/store';
+import { ErrorComponent, List } from './components';
 
 const App = () => {
-  const {data, loading, error} = useApi({url: api, limit: 151});
+  const dispatch = useDispatch<AppDispatch>()
+  const {loading, error} = useSelector((store: RootState) => store.pokemon);
 
-  if(error) return <ErrorComponent error={error} />
+  useEffect(() => {
+    dispatch(fetchPokemon(151))
+},[dispatch])
+
+  if(error) return <ErrorComponent />
 
   return (
   <div style={{padding: "0 2rem"}}>
@@ -14,7 +20,7 @@ const App = () => {
     {loading ? (
       <div>Looooadingggg....</div>
     ) : (
-      <List list={data} />
+      <List />
     )}
     
   </div>

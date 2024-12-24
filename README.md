@@ -43,7 +43,9 @@ commit the code as `task-3`<br>
 ## Task 4:
 Assignment: Introduce `redux-toolkit` and store the list of pokémon in the redux store.<br>
 Question 4: What makes the `createSlice` in redux-toolkit difference then A Reducer in redux?<br>
+Answer 4: `createSline` is the new or mordern way of creating reducers and requires less of boilerplate code to initalize reducers. before `create-slice`, we have to manually create actions and use switch statements to handle different types of actions which are often confusing. `create-slice` automatically generate actions based of reducer names, which helps in less error. Also we dont need to write switch statements in redux toolkit, we can directly write render funtions in the reducer object of `create-slice`.
 Question 5: Describe the benefits of immutable code.<br>
+Answer 5: immutable code has several benefits like the predictability of data - if we know that the data cannout be mutated, it will create less bugs and the code will be more maintainable and the app will not behave unexpectedly. it also makes easier to debug the code since we might know from where the data is being generated or being set and we don't have to traverse through thousands of line of code to find the bug. It also helps in increasing the performance optimization of the app.
 
 commit the code as `task-4`<br>
 

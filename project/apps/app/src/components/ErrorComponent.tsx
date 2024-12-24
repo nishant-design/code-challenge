@@ -1,8 +1,8 @@
-interface Props {
-  error: string
-}
+import { useSelector } from "react-redux"
+import { RootState } from "../store/store"
 
-export const ErrorComponent = ({error}: Props) => {
+const ErrorComponent = () => {
+  const {error} = useSelector((state:RootState) => state.pokemon);
 
   const reloadApp = () => {
     window.location.reload()
@@ -17,3 +17,5 @@ export const ErrorComponent = ({error}: Props) => {
     </div>
   )
 }
+
+export default ErrorComponent;
