@@ -9,7 +9,7 @@ const App = () => {
   if(error) return <ErrorComponent error={error} />
 
   return (
-  <>
+  <div style={{padding: "0 2rem"}}>
     <h1>Pokemon list:</h1>
     {loading ? (
       <div>Looooadingggg....</div>
@@ -17,7 +17,7 @@ const App = () => {
       <List list={data} />
     )}
     
-  </>
+  </div>
   )
 }
 

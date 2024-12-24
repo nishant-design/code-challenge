@@ -7,12 +7,10 @@ interface ListPropType {
 
 export const List = ({list}: ListPropType) => {
   return (
-    <div>
-      <ol style={{maxWidth: 250, listStylePosition: "inside"}}>
-        {list.map((item) => (
-          <PokemonCard pokemonDetails={item} />
-        ))}
-      </ol>
-    </div>
+    <ol style={{maxWidth: 1000, listStylePosition: "inside", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem", paddingLeft: 0}}>
+      {list.map((item) => (
+        <PokemonCard pokemonDetails={item} />
+      ))}
+    </ol>
   )
 }
