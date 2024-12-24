@@ -14,7 +14,11 @@ const initialState: PokemonInitialState = {
 const pokemonSlice = createSlice({
     name: "pokemon",
     initialState,
-    reducers: {},
+    reducers: {
+        removePokemon: (state, action) => {
+            state.data = action.payload;
+        }
+    },
     extraReducers(builder) {
         builder.addCase(fetchPokemon.pending, (state) => {
             state.loading = true;

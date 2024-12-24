@@ -52,14 +52,21 @@ commit the code as `task-4`<br>
 ## Task 5:
 Assignment: Create button for each pokémon where an Action will be dispatched to remove the pokémon from the store 
 Question 6: How can you verify the action has been dispatched?
+Answer 6: We can use several ways to confirm if the action is dispatched like we can use Redux dev tools extension of chrome to see if the action is being dispatched or not and if the state is being changed or not. Other than that we can console.log inside our reducer funtion so that id the dispatch call is being successful, this console.log statement would trigger. Also we can set up custom middleware and use console.log statement or anything in that middleware which helps in verifying that action has been successfully dispatched.  
 
 ## Task 6:
 Question 7: explain the use of `useEffect` hook in React
+Answer 7: `useEffect` is one the main hook in react which helps us achive lifecycle methods in funtional components. It also helps us to run side effects in our components liek fetching data from api, modifing DOM elements and also cleanup funtions. It also takes up dependenct array as a second argument. and whatever the state or dependency we provide in this array, the `useEffect` hook will run everytime that dependency array changes.
 Question 8: What is A High Order Component?
+Answer 8: HOC is a pattern in react in which we can reuse the component logic. it wraps around the component by adding new props or funtionality like state, mothods, or any kind of logic. By doing this it eleminates the writing the same logic and and again thus improving performance and readibility of code.
 Question 9: What use cases would a HOC be usefull?
+Answer 9: HOC would be useful in cases in where we need to reuse componenet logic again and again like for example when authenticating a user, we would write our authencation logic in HOC and wrap our components with it. In that HOC, we can check if the user is successfully logged in, we can allow him to proceed futher otherwise we can redirect him to the login page. Or maybe we want the user to show different pages based on specific feature flag or conditions, we can write that logic in our HOC and pass our components in that HOC.
 Question 10: What does it indicate when a component is prefixed with `use` and `with`
+Answer 10: `use` is often used with hooks in funtional components, wheather they're react in-build hooks are we made our own custom-hooks. `with` is generally used with HOC.
 Question 11: What is a Generic type in typescript?
+Answer 11: As the name suggests, the generic type is not limited to any specfic type. it can work with different data type while still check type safety. this is helpful if you want to some common reusabe logic that accepts multiple data type like say number, string or any other type.
 Question 12: Whats the difference between a controlled and uncontrolled input in React?
+Answer 12: the difference is how the data is handled in both situations. In controlled input, the value of teh input is controlled by react and it's hooks and in Uncontrolled input, the value of input is directly controlled and updated by DOM.
 
 
 
