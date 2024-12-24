@@ -14,7 +14,7 @@ const App = () => {
     {loading ? (
       <div>Looooadingggg....</div>
     ) : (
-      <List />
+      <List list={data} />
     )}
     
   </>

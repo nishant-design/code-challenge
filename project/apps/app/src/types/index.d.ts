@@ -1,0 +1,1 @@
+export interface ApiRespType {name: string, url: string}
