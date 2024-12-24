@@ -23,7 +23,9 @@ Start the test by Forking this repository, and complete the following tasks:<br>
 ## Task 1:
 Assignment: Use the `api` found in `App.tsx` to make a request and fetch a list of all Pokémon.<br>
 Question 1: How did you manage to fetch the list and what tool did you use?<br>
+Answer 1: I used inbuild javascript method "Fetch" to fetch the list. For this I created a custom hook called "useApi", in which we can paas the url of the api to be called (this hook can be reusable and can be called into other components as well).
 Question 2: What steps would you take to future improve this?<br>
+Answer 2: In the future, I would probably use some library like axios or tanstack query for better error handling and better reusability of api calls.
 
 commit the code as `task-1`<br>
 
